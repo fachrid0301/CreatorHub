@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Konten Kreator & KOL - CreatorHub</title>
+  <meta name="description" content="Daftarkan diri Anda sebagai influencer dan KOL partner di CreatorHub. Dapatkan peluang endorsement dan campaign brand secara transparan.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          Creator<span>Hub</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="creators.html" class="nav-link">Explore Creators</a></li>
+          <li><a href="index.html#howItWorks" class="nav-link">Cara Kerja</a></li>
+          <li><a href="index.html#keunggulan" class="nav-link">Keunggulan</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="admin.html" class="btn btn-secondary btn-sm">
+            Admin Portal
+          </a>
+          <a href="creators.html" class="btn btn-outline btn-sm">
+            Lihat Katalog
+          </a>
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= REGISTRATION HERO ================= -->
+  <section style="background: linear-gradient(135deg, rgba(255, 94, 0, 0.06) 0%, rgba(255, 133, 51, 0.02) 100%); padding: 48px 0 28px; border-bottom: 1px solid var(--color-border);">
+    <div class="container container-sm" style="text-align: center;">
+      <span class="badge badge-orange" style="margin-bottom: 12px;">🌟 Gabung Creator Partner</span>
+      <h1 style="font-size: 2.4rem; letter-spacing: -0.5px; margin-bottom: 12px;">
+        Daftarkan Profil Anda di CreatorHub
+      </h1>
+      <p style="font-size: 1.05rem; max-width: 620px; margin: 0 auto;">
+        Buka peluang kolaborasi berbayar dengan ratusan brand nasional. Data Anda akan langsung tersimpan ke Google Sheets dan ditinjau oleh tim kurasi kami.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FORM & LIVE PREVIEW CONTAINER ================= -->
+  <main class="section" style="padding-top: 40px;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 36px; align-items: start;">
+        
+        <!-- Registration Form Card -->
+        <div class="form-card">
+          <form id="creatorRegisterForm" novalidate>
+            
+            <div style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--color-border);">
+              <h3 style="font-size: 1.2rem; margin-bottom: 4px;">Informasi Pribadi & Kontak</h3>
+              <p style="font-size: 0.85rem;">Kontak ini digunakan brand dan tim kami untuk verifikasi serta penawaran campaign.</p>
+            </div>
+
+            <!-- Nama Lengkap -->
+            <div class="form-group">
+              <label class="form-label" for="regName">
+                Nama Lengkap <span class="required">*</span>
+              </label>
+              <input type="text" id="regName" class="form-control" placeholder="Contoh: Sarah Anindita" required>
+            </div>
+
+            <!-- Email & WhatsApp -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="regEmail">
+                  Email Aktif <span class="required">*</span>
+                </label>
+                <input type="email" id="regEmail" class="form-control" placeholder="sarah@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="regWhatsapp">
+                  Nomor WhatsApp <span class="required">*</span>
+                </label>
+                <input type="tel" id="regWhatsapp" class="form-control" placeholder="081234567890" required>
+                <div class="form-hint">Nomor aktif untuk diskusi penawaran campaign</div>
+              </div>
+            </div>
+
+            <div style="margin: 28px 0 20px; padding-bottom: 16px; border-bottom: 1px solid var(--color-border);">
+              <h3 style="font-size: 1.2rem; margin-bottom: 4px;">Profil Media Sosial</h3>
+              <p style="font-size: 0.85rem;">Platform utama tempat Anda membangun audiens.</p>
+            </div>
+
+            <!-- Platform Picker (Radio) -->
+            <div class="form-group">
+              <label class="form-label">Platform Utama <span class="required">*</span></label>
+              <div class="platform-picker-grid">
+                <div class="platform-radio-option">
+                  <input type="radio" name="platform" id="plat_ig" value="Instagram" checked>
+                  <label for="plat_ig" class="platform-radio-label">
+                    <span>📸</span> Instagram
+                  </label>
+                </div>
+                <div class="platform-radio-option">
+                  <input type="radio" name="platform" id="plat_tiktok" value="TikTok">
+                  <label for="plat_tiktok" class="platform-radio-label">
+                    <span>🎵</span> TikTok
+                  </label>
+                </div>
+                <div class="platform-radio-option">
+                  <input type="radio" name="platform" id="plat_yt" value="YouTube">
+                  <label for="plat_yt" class="platform-radio-label">
+                    <span>▶️</span> YouTube
+                  </label>
+                </div>
+                <div class="platform-radio-option">
+                  <input type="radio" name="platform" id="plat_x" value="X">
+                  <label for="plat_x" class="platform-radio-label">
+                    <span>🐦</span> X (Twitter)
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Username & Total Followers -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="regUsername">
+                  Username / Handle Akun <span class="required">*</span>
+                </label>
+                <input type="text" id="regUsername" class="form-control" placeholder="@sarahanindita" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="regFollowers">
+                  Jumlah Followers <span class="required">*</span>
+                </label>
+                <input type="number" id="regFollowers" class="form-control" placeholder="Contoh: 150000" min="0" required>
+                <div class="form-hint">Masukkan angka murni tanpa titik atau huruf</div>
+              </div>
+            </div>
+
+            <div style="margin: 28px 0 20px; padding-bottom: 16px; border-bottom: 1px solid var(--color-border);">
+              <h3 style="font-size: 1.2rem; margin-bottom: 4px;">Niche, Rate Card & Media Kit</h3>
+              <p style="font-size: 0.85rem;">Bantu brand memahami persona dan spesialisasi konten Anda.</p>
+            </div>
+
+            <!-- Kategori & Estimasi Rate Card -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="regCategory">
+                  Kategori Konten <span class="required">*</span>
+                </label>
+                <select id="regCategory" class="form-control" required>
+                  <option value="" disabled selected>Pilih Kategori...</option>
+                  <option value="Beauty & Fashion">💄 Beauty & Fashion</option>
+                  <option value="Tech & Gadget">💻 Tech & Gadget</option>
+                  <option value="Food & Culinary">🍜 Food & Culinary</option>
+                  <option value="Gaming & Esports">🎮 Gaming & Esports</option>
+                  <option value="Lifestyle & Travel">✈️ Lifestyle & Travel</option>
+                  <option value="Education & Business">📈 Education & Business</option>
+                  <option value="Health & Fitness">🏋️ Health & Fitness</option>
+                  <option value="Entertainment">🎭 Entertainment & Comedy</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="regRateCard">
+                  Estimasi Rate Card
+                </label>
+                <input type="text" id="regRateCard" class="form-control" placeholder="Contoh: Rp 2.000.000 / Post">
+                <div class="form-hint">Dapat dinegosiasikan dengan brand</div>
+              </div>
+            </div>
+
+            <!-- Link Portofolio & Foto Avatar URL -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="regPortfolio">
+                  Link Portofolio / Media Kit
+                </label>
+                <input type="url" id="regPortfolio" class="form-control" placeholder="https://drive.google.com/... atau linktree">
+                <div class="form-hint">Tautan Google Drive, Linktree, atau Behance</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="regAvatar">
+                  Foto Profil URL (Opsional)
+                </label>
+                <input type="url" id="regAvatar" class="form-control" placeholder="https://images.unsplash.com/...">
+                <div class="form-hint">Kosongkan untuk menggunakan avatar default</div>
+              </div>
+            </div>
+
+            <!-- Deskripsi Singkat / Bio -->
+            <div class="form-group">
+              <label class="form-label" for="regBio">
+                Deskripsi Singkat / Bio Profil
+              </label>
+              <textarea id="regBio" class="form-control" rows="3" placeholder="Ceritakan fokus konten Anda, demografi audiens (misal 70% wanita usia 18-24), dan brand yang pernah berkolaborasi bersama Anda..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div style="margin-top: 28px;">
+              <button type="submit" id="submitBtn" class="btn btn-primary btn-lg" style="width: 100%;">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                Kirim Pendaftaran ke Google Sheets
+              </button>
+              <p style="text-align: center; font-size: 0.8rem; color: var(--color-text-muted); margin-top: 10px;">
+                🔒 Data Anda aman dan hanya digunakan untuk keperluan pencocokan campaign CreatorHub.
+              </p>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Live Preview Card (Right Column) -->
+        <div style="position: sticky; top: 100px;">
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between;">
+            <span>👁️ Live Card Preview</span>
+            <span style="font-size: 0.75rem; background: var(--color-primary-light); color: var(--color-primary); padding: 2px 8px; border-radius: var(--radius-full);">Tampilan Publik</span>
+          </div>
+
+          <!-- Preview Card Component -->
+          <div class="creator-card" style="box-shadow: var(--shadow-lg);">
+            <div class="creator-header-bg"></div>
+            <div class="creator-card-body">
+              <div class="creator-avatar-wrap">
+                <img id="prevAvatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80" alt="Preview Avatar" class="creator-avatar">
+              </div>
+
+              <div class="creator-name">
+                <span id="prevName">Nama Kreator Anda</span>
+                <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <div class="creator-handle" id="prevHandle">@username_anda</div>
+
+              <div class="creator-badges">
+                <span class="badge badge-orange" id="prevCategory">Kategori Konten</span>
+                <span id="prevPlatformBadge">
+                  <span class="platform-pill platform-instagram">Instagram</span>
+                </span>
+              </div>
+
+              <p class="creator-bio" id="prevBio">
+                Ceritakan keunikan gaya konten, audiens, dan pencapaian Anda di sini...
+              </p>
+
+              <div class="creator-meta-stats">
+                <div class="meta-stat-item">
+                  <span class="meta-stat-label">Followers</span>
+                  <span class="meta-stat-value" id="prevFollowers">0</span>
+                </div>
+                <div class="meta-stat-item" style="text-align: right;">
+                  <span class="meta-stat-label">Rate Mulai</span>
+                  <span class="meta-stat-value" id="prevRate" style="color: var(--color-primary);">Mulai dari Rp -</span>
+                </div>
+              </div>
+
+              <div class="creator-card-actions">
+                <button class="btn btn-secondary btn-sm" disabled style="opacity: 0.8;">Lihat Detail</button>
+                <button class="btn btn-primary btn-sm" disabled style="opacity: 0.8;">Chat WA</button>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 16px; margin-top: 16px; font-size: 0.85rem; color: var(--color-text-secondary);">
+            <strong>ℹ️ Catatan Verifikasi:</strong> Setelah pendaftaran dikirim, profil Anda akan berstatus <em>Pending</em> di Google Sheets. Admin akan memverifikasi dan menyetujuinya agar tayang di katalog publik.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 CreatorHub Indonesia. Seluruh hak cipta dilindungi.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="index.html">Home</a>
+          <a href="creators.html">Katalog Kreator</a>
+          <a href="admin.html">Admin Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

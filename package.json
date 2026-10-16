@@ -1,0 +1,28 @@
+{
+  "name": "creatorhub-kol-marketplace",
+  "version": "1.0.0",
+  "description": "Platform KOL & Influencer Marketplace modern terintegrasi dengan Google Sheets API",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "beautify-sheet": "node scripts/beautifySheet.js"
+  },
+  "keywords": [
+    "kol",
+    "influencer",
+    "marketplace",
+    "google-sheets-api",
+    "express",
+    "creatorhub"
+  ],
+  "author": "CreatorHub Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "googleapis": "^144.0.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

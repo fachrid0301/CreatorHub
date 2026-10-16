@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Creators & Influencers - CreatorHub</title>
+  <meta name="description" content="Katalog lengkap influencer dan KOL terverifikasi di Indonesia. Filter berdasarkan kategori, platform media sosial, dan jumlah followers.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          Creator<span>Hub</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="creators.html" class="nav-link active">Explore Creators</a></li>
+          <li><a href="index.html#howItWorks" class="nav-link">Cara Kerja</a></li>
+          <li><a href="index.html#keunggulan" class="nav-link">Keunggulan</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="admin.html" class="btn btn-secondary btn-sm">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Admin Portal
+          </a>
+          <a href="register.html" class="btn btn-primary">
+            Daftar Jadi Kreator
+          </a>
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HEADER ================= -->
+  <section style="background-color: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 36px 0;">
+    <div class="container">
+      <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 6px;">
+        <a href="index.html" style="color: var(--color-text-secondary);">Home</a> &bull; <span>Explore Creators</span>
+      </div>
+      <h1 style="font-size: 2.2rem; letter-spacing: -0.5px;">Katalog Influencer & KOL</h1>
+      <p style="margin-top: 6px; font-size: 1rem;">
+        Temukan talent kreator terbaik untuk mempromosikan produk brand Anda. Data diambil secara langsung dari Google Sheets.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= EXPLORE SECTION ================= -->
+  <main class="section" style="padding-top: 36px;">
+    <div class="container">
+      
+      <!-- Filter Toolbar -->
+      <div class="filter-toolbar">
+        <div class="filter-row-top">
+          <!-- Search input -->
+          <div class="search-input-wrap">
+            <svg class="search-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" id="searchInput" placeholder="Cari nama kreator, username (@), kategori, atau bio...">
+          </div>
+
+          <!-- Select Filters -->
+          <div class="filter-selects">
+            <select id="platformFilter" class="custom-select">
+              <option value="All">Semua Platform</option>
+              <option value="Instagram">📸 Instagram</option>
+              <option value="TikTok">🎵 TikTok</option>
+              <option value="YouTube">▶️ YouTube</option>
+              <option value="X">🐦 X (Twitter)</option>
+            </select>
+
+            <select id="tierFilter" class="custom-select">
+              <option value="All">Semua Skala Followers</option>
+              <option value="nano">Nano (&lt; 10K)</option>
+              <option value="micro">Micro (10K - 100K)</option>
+              <option value="macro">Macro (100K - 500K)</option>
+              <option value="mega">Mega (&gt; 500K)</option>
+            </select>
+
+            <select id="sortFilter" class="custom-select">
+              <option value="followers-desc">Followers Terbanyak</option>
+              <option value="followers-asc">Followers Terendah</option>
+              <option value="name-asc">Nama (A - Z)</option>
+            </select>
+
+            <button class="btn btn-secondary btn-sm" id="resetFiltersBtn" title="Reset filter">
+              Reset
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Horizontal Pills -->
+        <div class="category-tags-scroll" id="categoryTabsContainer">
+          <!-- Diisi dinamis oleh creators.js -->
+        </div>
+      </div>
+
+      <!-- Result Counter & Notice -->
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+        <div id="resultsCountIndicator" style="font-weight: 600; font-size: 0.95rem; color: var(--color-text-secondary);">
+          Memuat daftar kreator...
+        </div>
+        <div style="font-size: 0.85rem; color: var(--color-text-muted);">
+          Data tersinkronisasi via Google Sheets API
+        </div>
+      </div>
+
+      <!-- Creators Grid -->
+      <div class="creators-grid" id="creatorsGrid">
+        <!-- Rendered by creators.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>
+            <span style="color: var(--color-primary);">Creator</span>Hub
+          </h4>
+          <p style="margin-bottom: 16px;">
+            Platform marketplace KOL & Influencer terintegrasi Google Sheets pertama di Indonesia.
+          </p>
+          <div style="font-size: 0.85rem; color: #94A3B8;">
+            📍 Jakarta, Indonesia | ✉️ hello@creatorhub.id
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Menu Cepat</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="creators.html">Explore Creators</a></li>
+            <li><a href="register.html">Daftar Jadi Kreator</a></li>
+            <li><a href="admin.html">Dashboard Admin</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Kategori Populer</h5>
+          <ul class="footer-links">
+            <li><a href="creators.html?category=Beauty%20%26%20Fashion">Beauty & Fashion</a></li>
+            <li><a href="creators.html?category=Tech%20%26%20Gadget">Tech & Gadget</a></li>
+            <li><a href="creators.html?category=Food%20%26%20Culinary">Food & Culinary</a></li>
+            <li><a href="creators.html?category=Gaming%20%26%20Esports">Gaming & Esports</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Bantuan</h5>
+          <ul class="footer-links">
+            <li><a href="index.html#howItWorks">Panduan Kolaborasi</a></li>
+            <li><a href="register.html">Form Registrasi KOL</a></li>
+            <li><a href="index.html#contact">Kontak Kami</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 CreatorHub Indonesia. Seluruh hak cipta dilindungi.</div>
+        <div>Terkoneksi langsung ke Google Sheets API v4</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/creators.js"></script>
+</body>
+</html>
