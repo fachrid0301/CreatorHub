@@ -90,3 +90,5 @@ function startServer(portToTry) {
 
 startServer(PORT);
 
+module.exports = app;
+
